@@ -942,11 +942,12 @@ section {
 
 .cta h2 {
     margin-bottom: var(--spacing-sm);
+    color: var(--color-white);
 }
 
 .cta p {
     font-size: 1.2rem;
-    margin-bottom: var(--spacing-lg);
+    color: var(--color-white);
 }
 
 
