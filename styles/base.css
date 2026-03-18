@@ -708,15 +708,22 @@ section {
    CTA SECTIONS
    ============================================ */
 .cta {
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../images/Cta_bg.jpg');
+    background: url('../images/Cta_bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     color: var(--color-white);
     text-align: center;
     padding: var(--spacing-2xl) 0;
     position: relative;
+}
+
+/* Parallax only on desktop */
+@media (min-width: 1025px) {
+    .cta {
+        background-attachment: fixed;
+    }
 }
 
 .cta::before {
@@ -734,6 +741,17 @@ section {
 .cta .container {
     position: relative;
     z-index: 1;
+}
+
+.cta h2 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-white);
+}
+
+.cta p {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
 }
 
 /* Portfolio Grid - Responsive Horizontal Layout */
@@ -927,27 +945,6 @@ section {
 
 .portfolio-item:hover .portfolio-image::after {
     opacity: 1;
-}
-
-
-/* ============================================
-   CTA SECTIONS
-   ============================================ */
-.cta {
-    background-image: url('../images/Cta_bg.jpg');
-    color: var(--color-white);
-    text-align: center;
-    padding: var(--spacing-2xl) 0;
-}
-
-.cta h2 {
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-white);
-}
-
-.cta p {
-    font-size: 1.2rem;
-    color: var(--color-white);
 }
 
 
