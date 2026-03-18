@@ -708,7 +708,7 @@ section {
    CTA SECTIONS
    ============================================ */
 .cta {
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('images/Cta_bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../images/Cta_bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -934,7 +934,7 @@ section {
    CTA SECTIONS
    ============================================ */
 .cta {
-    background-image: url('images/Cta_bg.jpg');
+    background-image: url('../images/Cta_bg.jpg');
     color: var(--color-white);
     text-align: center;
     padding: var(--spacing-2xl) 0;
