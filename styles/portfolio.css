@@ -10,9 +10,10 @@
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 420px));
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
+    justify-content: center;
 }
 
 .testimonial-card {
@@ -29,17 +30,26 @@
     box-shadow: var(--shadow-lg);
 }
 
+.testimonial-stars {
+    color: var(--color-gold);
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 2px;
+}
+
 .testimonial-text {
     font-style: italic;
     color: var(--color-text-gray);
     margin-bottom: var(--spacing-sm);
     line-height: 1.8;
+    font-size: 1rem;
 }
 
 .testimonial-author {
     color: var(--color-gold);
     font-weight: 600;
     text-align: right;
+    font-size: 0.95rem;
 }
 
 /* Mission/Vision Grid */
