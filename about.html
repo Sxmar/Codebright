@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CodeBright</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/Codebright-logo-dark.png" alt="CodeBright Logo" class="logo-image">
+                    </a>
+                </div>
+                <!-- Hamburger Menu Toggle (CSS Only) -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About <span class="gold">CodeBright</span></h1>
+            <p>Crafting digital excellence since 2015</p>
+        </div>
+    </section>
+
+    <!-- CodeBright About Section - Clean Staggered Grid -->
+    <section class="codebright-about-section">
+        <div class="about-container">
+            <!-- Header -->
+            <h2 class="about-main-heading">The Story behind CodeBright</h2>
+
+            <!-- Section 1: Text Left, Image Right -->
+            <div class="about-row">
+                <div class="about-text-col">
+                    <p>CodeBright represents a passionate commitment to technology and modern web design. As an emerging developer with a strong foundation in contemporary web technologies, we specialize in creating clean, effective digital solutions that deliver real value for businesses and individuals alike.</p>
+                    <p>Through dedicated study and hands-on experience, we've cultivated expertise in web development, digital strategy, and creative design. Our approach centers on understanding each client's unique requirements and delivering custom websites that align perfectly with their objectives and budget parameters.</p>
+                </div>
+                <div class="about-image-col">
+                    <img src="images/Aboutus-pic2.jpg" alt="Coding on screen">
+                </div>
+            </div>
+
+            <!-- Section 2: Image Left, Text + List Right -->
+            <div class="about-row about-row-reverse">
+                <div class="about-image-col">
+                    <img src="images/Aboutus-pic1.jpg" alt="Desk setup with monitors">
+                </div>
+                <div class="about-text-col">
+                    <p>Our portfolio spans diverse projects—from personal portfolios to comprehensive business websites—each designed to establish a compelling online presence. We blend technical proficiency with creative innovation to deliver solutions that are practical, contemporary, and intuitively user-friendly.</p>
+                    
+                    <ul class="about-checklist">
+                        <li>
+                            <svg class="checkmark-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Bespoke websites tailored to your specific requirements</span>
+                        </li>
+                        <li>
+                            <svg class="checkmark-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Fresh perspectives with contemporary design aesthetics</span>
+                        </li>
+                        <li>
+                            <svg class="checkmark-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Clean, responsive, and intuitive user experiences</span>
+                        </li>
+                        <li>
+                            <svg class="checkmark-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Direct communication and complete transparency throughout</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision - Modern Design -->
+    <section class="mission-vision-modern">
+        <div class="container">
+            <div class="section-header-center">
+                <h2>Our Purpose & <span class="text-gradient">Direction</span></h2>
+                <p class="section-subtitle">Driven by passion, guided by excellence</p>
+            </div>
+            
+            <div class="mv-modern-grid">
+                <!-- Mission Card -->
+                <div class="mv-modern-card mission-card">
+                    <div class="mv-icon-wrapper">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Our <span class="text-gradient">Mission</span></h3>
+                    <p>Empower businesses with premium web solutions that blend aesthetic excellence with strategic functionality. We transform digital visions into reality—creating websites that captivate audiences and drive measurable growth.</p>
+                    <div class="mv-accent-line"></div>
+                </div>
+                
+                <!-- Vision Card -->
+                <div class="mv-modern-card vision-card">
+                    <div class="mv-icon-wrapper">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Our <span class="text-gradient">Vision</span></h3>
+                    <p>Be the leading web design agency recognized for setting industry standards in quality, innovation, and client service. We envision a digital landscape where every business achieves its full potential through world-class web solutions.</p>
+                    <div class="mv-accent-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values - Modern Design -->
+    <section class="core-values-modern">
+        <div class="container">
+            <div class="section-header-center">
+                <h2>Core <span class="text-gradient">Values</span></h2>
+                <p class="section-subtitle">The principles that drive everything we do</p>
+            </div>
+            
+            <div class="values-modern-grid">
+                <!-- Excellence -->
+                <div class="value-modern-card">
+                    <div class="value-number">01</div>
+                    <div class="value-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>Perfection in every pixel, every line of code, every client interaction. Excellence isn't a goal—it's our standard.</p>
+                </div>
+                
+                <!-- Innovation -->
+                <div class="value-modern-card">
+                    <div class="value-number">02</div>
+                    <div class="value-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Staying ahead of trends, exploring new technologies, delivering cutting-edge solutions that set you apart.</p>
+                </div>
+                
+                <!-- Integrity -->
+                <div class="value-modern-card">
+                    <div class="value-number">03</div>
+                    <div class="value-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>Honesty and transparency in every relationship. Building trust through consistent, ethical practices.</p>
+                </div>
+                
+                <!-- Collaboration -->
+                <div class="value-modern-card">
+                    <div class="value-number">04</div>
+                    <div class="value-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>Working as partners, not vendors. Your vision realized through open communication and teamwork.</p>
+                </div>
+                
+                <!-- Creativity -->
+                <div class="value-modern-card">
+                    <div class="value-number">05</div>
+                    <div class="value-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M19.07 4.93l-14.14 14.14M4.93 4.93l14.14 14.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Creativity</h3>
+                    <p>Fresh perspectives and innovative thinking. Creating unique solutions that make you stand out.</p>
+                </div>
+                
+                <!-- Results -->
+                <div class="value-modern-card">
+                    <div class="value-number">06</div>
+                    <div class="value-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Results</h3>
+                    <p>Success measured by tangible outcomes—increased traffic, higher conversions, real business growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Expertise - Modern Design -->
+    <section class="expertise-modern">
+        <div class="container">
+            <div class="section-header-center">
+                <h2>Our <span class="text-gradient">Expertise</span></h2>
+                <p class="section-subtitle">Technical mastery meets creative excellence</p>
+            </div>
+            
+            <div class="expertise-grid">
+                <!-- Design -->
+                <div class="expertise-card">
+                    <div class="expertise-icon-wrapper">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Design</h3>
+                    <ul class="expertise-list">
+                        <li><span class="check-icon">✓</span> UI/UX Design</li>
+                        <li><span class="check-icon">✓</span> Responsive Design</li>
+                        <li><span class="check-icon">✓</span> Brand Identity</li>
+                        <li><span class="check-icon">✓</span> Graphic Design</li>
+                        <li><span class="check-icon">✓</span> Typography</li>
+                        <li><span class="check-icon">✓</span> Color Theory</li>
+                    </ul>
+                </div>
+                
+                <!-- Development -->
+                <div class="expertise-card">
+                    <div class="expertise-icon-wrapper">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Development</h3>
+                    <ul class="expertise-list">
+                        <li><span class="check-icon">✓</span> HTML5 & CSS3</li>
+                        <li><span class="check-icon">✓</span> JavaScript</li>
+                        <li><span class="check-icon">✓</span> PHP & MySQL</li>
+                        <li><span class="check-icon">✓</span> WordPress</li>
+                        <li><span class="check-icon">✓</span> E-commerce Platforms</li>
+                        <li><span class="check-icon">✓</span> Custom CMS</li>
+                    </ul>
+                </div>
+                
+                <!-- Strategy -->
+                <div class="expertise-card">
+                    <div class="expertise-icon-wrapper">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="12" y1="20" x2="12" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="18" y1="20" x2="18" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="6" y1="20" x2="6" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Strategy</h3>
+                    <ul class="expertise-list">
+                        <li><span class="check-icon">✓</span> SEO Optimization</li>
+                        <li><span class="check-icon">✓</span> Digital Marketing</li>
+                        <li><span class="check-icon">✓</span> Content Strategy</li>
+                        <li><span class="check-icon">✓</span> Analytics & Reporting</li>
+                        <li><span class="check-icon">✓</span> Conversion Optimization</li>
+                        <li><span class="check-icon">✓</span> User Research</li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="expertise-card">
+                    <div class="expertise-icon-wrapper">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Support</h3>
+                    <ul class="expertise-list">
+                        <li><span class="check-icon">✓</span> Website Maintenance</li>
+                        <li><span class="check-icon">✓</span> Security Updates</li>
+                        <li><span class="check-icon">✓</span> Performance Monitoring</li>
+                        <li><span class="check-icon">✓</span> Technical Support</li>
+                        <li><span class="check-icon">✓</span> Training & Documentation</li>
+                        <li><span class="check-icon">✓</span> Ongoing Consultation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose CodeBright - Modern Design -->
+    <section class="why-choose-modern">
+        <div class="container">
+            <div class="section-header-center">
+                <h2>Why Choose <span class="text-gradient">CodeBright</span></h2>
+                <p class="section-subtitle">What sets us apart from the rest</p>
+            </div>
+            
+            <div class="why-choose-grid">
+                <!-- Proven Track Record -->
+                <div class="why-choose-card">
+                    <div class="why-icon-circle">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Proven Track Record</h3>
+                    <p>Successful projects delivered across diverse industries, with consistently high client satisfaction ratings and measurable results.</p>
+                    <div class="why-stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                </div>
+                
+                <!-- Expert Team -->
+                <div class="why-choose-card">
+                    <div class="why-icon-circle">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Dedicated Expertise</h3>
+                    <p>Passionate professionals with hands-on experience in design, development, and digital strategy—committed to your success.</p>
+                    <div class="why-stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+                
+                <!-- Client-Centric -->
+                <div class="why-choose-card">
+                    <div class="why-icon-circle">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Client-Centric Approach</h3>
+                    <p>Your success is our priority. We listen, understand, and deliver solutions tailored to your unique needs and goals.</p>
+                    <div class="why-stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
+                
+                <!-- Competitive Pricing -->
+                <div class="why-choose-card">
+                    <div class="why-icon-circle">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="12" y1="1" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Premium quality that fits your budget. Exceptional value with transparent, competitive pricing—no hidden fees.</p>
+                    <div class="why-stat">
+                        <span class="stat-number">Good</span>
+                        <span class="stat-label">Pricing Model</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Let's Build Something Great Together</h2>
+            <p>Partner with us to elevate your digital presence</p>
+            <a href="contact.html" class="btn-secondary">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/Codebright-logo-dark.png" alt="CodeBright Logo" class="footer-logo-image">
+                    
+                    <p>Simple, professional web design using HTML & CSS.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@codebright.com</p>
+                    <p>Phone: +1 (647) 561-5337</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CodeBright. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

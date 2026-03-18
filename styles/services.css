@@ -1,0 +1,432 @@
+/* ============================================
+   PRICING/SERVICE CARDS
+   ============================================ */
+.packages-grid,
+.additional-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.package-card,
+.additional-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(33, 94, 100, 0.15);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    transition: all var(--transition-slow);
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.package-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gold-gradient);
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.package-card:hover::before {
+    transform: scaleX(1);
+}
+
+.package-card:hover,
+.additional-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--color-gold);
+    box-shadow: 0 16px 48px rgba(33, 94, 100, 0.2);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Additional Card Specific Styling */
+.additional-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold-gradient);
+    transform: scaleX(0);
+    transition: transform var(--transition-slow);
+}
+
+.additional-card:hover::before {
+    transform: scaleX(1);
+}
+
+.additional-card h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+.additional-card p {
+    font-family: 'Inter', var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text-gray);
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.additional-card .benefit-icon {
+    margin-bottom: var(--spacing-md);
+}
+
+.package-card.featured {
+    border-color: var(--color-gold);
+    background: var(--glass-bg-light);
+    transform: scale(1.05);
+}
+
+.package-card.featured .package-header {
+    padding-top: 2.5rem;
+}
+
+.featured-badge {
+    position: absolute;
+    top: -0.75rem;
+    right: 1.5rem;
+    background: var(--gold-gradient);
+    color: var(--color-black);
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(33, 94, 100, 0.4);
+    z-index: 10;
+}
+
+.package-price {
+    font-family: var(--font-heading);
+    color: var(--color-gold);
+    margin: var(--spacing-sm) 0;
+}
+
+.package-price .amount {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.package-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.package-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--glass-border);
+    position: relative;
+    padding-left: 1.75rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.package-features li::before {
+    content: '✓';
+    color: var(--color-gold);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    top: 0.5rem;
+}
+
+
+/* ============================================
+   PRICING CALCULATOR - Custom Styles
+   ============================================ */
+
+/* Calculator Section */
+.calculator-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-light-gray);
+}
+
+/* Calculator Card - Premium Glassmorphism */
+.calculator-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--color-white);
+    border: 2px solid var(--color-gold);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-gold-lg);
+    transition: all var(--transition-normal);
+}
+
+.calculator-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 64px rgba(33, 94, 100, 0.5);
+}
+
+/* Rate Input Section */
+.rate-input-section {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--color-light-gray);
+}
+
+.rate-input-section label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--color-black);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.rate-input-section input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    background: var(--color-light-gray);
+    border: 2px solid var(--color-medium-gray);
+    border-radius: 8px;
+    transition: all var(--transition-normal);
+    font-family: var(--font-body);
+}
+
+.rate-input-section input:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    background: var(--color-white);
+    box-shadow: 0 0 20px rgba(33, 94, 100, 0.3);
+    transform: scale(1.02);
+}
+
+/* Features Section */
+.features-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.features-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+}
+
+.features-subtitle {
+    color: var(--color-text-gray);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Features List */
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+/* Individual Feature Item */
+.feature-item {
+    background: var(--color-light-gray);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: var(--spacing-sm);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.feature-item:hover {
+    background: var(--color-white);
+    border-color: var(--color-gold);
+    transform: translateX(8px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Checkbox Styling */
+.feature-checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    accent-color: var(--color-gold);
+    margin-right: var(--spacing-sm);
+}
+
+/* Label Styling */
+.feature-item label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.feature-name {
+    font-weight: 500;
+    color: var(--color-black);
+    font-size: 1.05rem;
+    margin-left: 0.5rem;
+}
+
+.feature-hours {
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: var(--color-white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid var(--color-gold);
+}
+
+/* Checked State */
+.feature-checkbox:checked + label {
+    color: var(--color-gold);
+}
+
+.feature-checkbox:checked ~ label .feature-name {
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+.feature-item:has(.feature-checkbox:checked) {
+    background: var(--color-white);
+    border-color: var(--color-gold);
+    box-shadow: 0 4px 16px rgba(33, 94, 100, 0.2);
+}
+
+/* Results Section */
+.results-section {
+    background: var(--dark-gradient);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    border: 2px solid var(--color-gold);
+}
+
+/* Result Items */
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-size: 1.1rem;
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.result-value {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    transition: all var(--transition-normal);
+}
+
+/* Price Result - Larger and Gold */
+.price-result .result-value {
+    font-size: 2.5rem;
+    color: var(--color-gold);
+    text-shadow: 0 0 20px rgba(33, 94, 100, 0.5);
+}
+
+/* Animation for result values */
+.result-value {
+    display: inline-block;
+}
+
+/* Quote Button Section */
+.quote-button-section {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 2px solid var(--color-light-gray);
+}
+
+.quote-button-section .btn-primary {
+    display: inline-block;
+    width: auto;
+    min-width: 250px;
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.quote-note {
+    color: var(--color-text-gray);
+    font-size: 0.95rem;
+    margin-top: var(--spacing-sm);
+    font-style: italic;
+}
+
+/* Mobile Responsive for Calculator */
+@media (max-width: 768px) {
+    .calculator-card {
+        padding: var(--spacing-md);
+    }
+    
+    .rate-input-section input {
+        font-size: 1.2rem;
+    }
+    
+    .features-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .feature-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .feature-item:hover {
+        transform: translateX(4px);
+    }
+    
+    .feature-name {
+        font-size: 0.95rem;
+    }
+    
+    .feature-hours {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .result-label {
+        font-size: 1rem;
+    }
+    
+    .result-value {
+        font-size: 1.3rem;
+    }
+    
+    .price-result .result-value {
+        font-size: 2rem;
+    }
+}
+
+/* Tablet Adjustments for Calculator */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .calculator-card {
+        max-width: 650px;
+    }
+}
+

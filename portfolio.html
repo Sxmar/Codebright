@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - CodeBright</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/Codebright-logo-dark.png" alt="CodeBright Logo" class="logo-image">
+                    </a>
+                </div>
+                <!-- Hamburger Menu Toggle (CSS Only) -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our <span class="gold">Portfolio</span></h1>
+            <p>Showcasing our finest work and successful projects</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Introduction -->
+    <section class="portfolio-intro">
+        <div class="container">
+            <h2>Crafting Digital <span class="gold">Excellence</span></h2>
+            <p>Each project in our portfolio represents our commitment to delivering exceptional web solutions. From elegant corporate websites to dynamic e-commerce platforms, we bring visions to life with precision and creativity.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 - WITH LIVE LINK EXAMPLE -->
+                <div class="portfolio-item">
+                    <a href="https://topclasslimo.codebright.ca/" target="_blank" class="portfolio-link">
+                        <div class="portfolio-image">
+                            <img src="images/TopClassLimoPic.jpg" alt="Top Class Limo Website">
+                            <div class="image-placeholder">
+                                <span>Click to View Live Project</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Top Class Limo</h3>
+                            <p class="portfolio-category">Transportation</p>
+                            <p class="portfolio-description">A sleek and professional website for a limousine service, featuring online booking and service details.</p>
+                            <span class="view-project-btn">View Live Project →</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Portfolio Item 2 - WITH LIVE LINK -->
+                <div class="portfolio-item">
+                    <a href="https://www.performanceautocarrier.com/booking/" target="_blank" class="portfolio-link">
+                        <div class="portfolio-image">
+                            <img src="images/AutoPerfomacePic.jpg" alt="Performance Auto Carrier Website">
+                            <div class="image-placeholder">
+                                <span>Click to View Live Project</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Performance Auto Carrier</h3>
+                            <p class="portfolio-category">Transportation & Logistics</p>
+                            <p class="portfolio-description">A comprehensive booking platform for auto transport services, featuring an intuitive booking form and truck transport options.</p>
+                            <span class="view-project-btn">View Live Project →</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Portfolio Item 3 - TEMPLATE FOR YOUR SCREENSHOTS -->
+                <!-- 
+                    HOW TO ADD YOUR SCREENSHOT:
+                    1. Save your screenshot in the 'images' folder (e.g., images/project3-screenshot.jpg)
+                    2. Add the <img> tag inside the portfolio-image div (see example below)
+                    3. The black placeholder will automatically hide when you add the image
+                    4. Update the project name, category, and description
+                -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <!-- ADD YOUR IMAGE HERE - Example: -->
+                        <!-- <img src="images/project3-screenshot.jpg" alt="Project Name"> -->
+                        <div class="image-placeholder">
+                            <span>Add Your Screenshot Here</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Project Name</h3>
+                        <p class="portfolio-category">Category</p>
+                        <p class="portfolio-description">Write a short description of this project.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 - TEMPLATE -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <!-- <img src="images/project4-screenshot.jpg" alt="Project Name"> -->
+                        <div class="image-placeholder">
+                            <span>Add Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Project Name</h3>
+                        <p class="portfolio-category">Category</p>
+                        <p class="portfolio-description">Add your project description here.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 - TEMPLATE -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <!-- <img src="images/project5-screenshot.jpg" alt="Project Name"> -->
+                        <div class="image-placeholder">
+                            <span>Add Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Project Name</h3>
+                        <p class="portfolio-category">Category</p>
+                        <p class="portfolio-description">Add your project description here.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 - TEMPLATE -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <!-- <img src="images/project6-screenshot.jpg" alt="Project Name"> -->
+                        <div class="image-placeholder">
+                            <span>Add Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Project Name</h3>
+                        <p class="portfolio-category">Category</p>
+                        <p class="portfolio-description">Add your project description here.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 7 - TEMPLATE -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <!-- <img src="images/project7-screenshot.jpg" alt="Project Name"> -->
+                        <div class="image-placeholder">
+                            <span>Add Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Project Name</h3>
+                        <p class="portfolio-category">Category</p>
+                        <p class="portfolio-description">Add your project description here.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 8 - TEMPLATE -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <!-- <img src="images/project8-screenshot.jpg" alt="Project Name"> -->
+                        <div class="image-placeholder">
+                            <span>Add Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Project Name</h3>
+                        <p class="portfolio-category">Category</p>
+                        <p class="portfolio-description">Add your project description here.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 9 - TEMPLATE -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <!-- <img src="images/project9-screenshot.jpg" alt="Project Name"> -->
+                        <div class="image-placeholder">
+                            <span>Add Screenshot</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Project Name</h3>
+                        <p class="portfolio-category">Category</p>
+                        <p class="portfolio-description">Add your project description here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our <span class="gold">Clients Say</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"CodeBright transformed our online presence completely. The attention to detail and professionalism exceeded our expectations."</p>
+                    <p class="testimonial-author">- Sarah Johnson, Grand Palace Hotel</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Our e-commerce sales increased by 150% after the website redesign. The team's expertise in user experience is outstanding."</p>
+                    <p class="testimonial-author">- Michael Chen, Elite Fashion Boutique</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Professional, responsive, and creative. They delivered exactly what we needed and more. Highly recommended!"</p>
+                    <p class="testimonial-author">- David Morrison, Morrison & Associates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's create something amazing together</p>
+            <a href="contact.html" class="btn-secondary"><span>Get in Touch</span></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/Codebright-logo-dark.png" alt="CodeBright Logo" class="footer-logo-image">
+                    
+                    <p>Simple, professional web design using HTML & CSS.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@codebright.com</p>
+                    <p>Phone: +1 (647) 561-5337</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CodeBright. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

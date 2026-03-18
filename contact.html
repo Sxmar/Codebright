@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CodeBright</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Form Status Messages */
+        #form-status {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        #form-status.success {
+            display: block;
+            background-color: rgba(76, 175, 80, 0.1);
+            border: 2px solid #4CAF50;
+            color: #2e7d32;
+        }
+        
+        #form-status.error {
+            display: block;
+            background-color: rgba(244, 67, 54, 0.1);
+            border: 2px solid #f44336;
+            color: #c62828;
+        }
+        
+        #form-status.loading {
+            display: block;
+            background-color: rgba(255, 215, 0, 0.1);
+            border: 2px solid #FFD700;
+            color: #DAA520;
+        }
+        
+        /* Contact Form Button Override - Better Contrast */
+        .contact-form .btn-primary {
+            background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%);
+            color: #000000 !important;
+            font-weight: 700;
+            text-shadow: none;
+            border: 2px solid #FFD700;
+        }
+        
+        .contact-form .btn-primary span {
+            color: #000000 !important;
+            font-weight: 700;
+        }
+        
+        .contact-form .btn-primary:hover {
+            background: linear-gradient(135deg, #FFED4E 0%, #FFD700 100%);
+            color: #000000 !important;
+            border-color: #FFED4E;
+            box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+        }
+        
+        .contact-form .btn-primary:hover span {
+            color: #000000 !important;
+        }
+        
+        .contact-form .btn-primary:disabled {
+            background: #cccccc;
+            border-color: #999999;
+            color: #666666 !important;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        
+        .contact-form .btn-primary:disabled span {
+            color: #666666 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/Codebright-logo-dark.png" alt="CodeBright Logo" class="logo-image">
+                    </a>
+                </div>
+                <!-- Hamburger Menu Toggle (CSS Only) -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get In <span class="gold">Touch</span></h1>
+            <p>Let's discuss your project and bring your vision to life</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Us a <span class="gold">Message</span></h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                    
+                    <form class="contact-form" action="https://formspree.io/f/xzdrwwzj" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="html-css">HTML/CSS Website</option>
+                                <option value="wordpress">WordPress Website</option>
+                                <option value="shopify">Shopify E-commerce</option>
+                                <option value="maintenance">Website Maintenance</option>
+                                <option value="redesign">Website Redesign</option>
+                                <option value="custom">Custom Development</option>
+                                <option value="consultation">Free Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under1k">Under $1,000</option>
+                                <option value="1k-2k">$1,000 - $2,000</option>
+                                <option value="2k-5k">$2,000 - $5,000</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="over10k">Over $10,000</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project, goals, and any specific requirements..."></textarea>
+                        </div>
+                        
+                        <!-- Formspree Status Messages -->
+                        <div id="form-status"></div>
+                        
+                        <button type="submit" class="btn-primary"><span>Send Message</span></button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info-container">
+                    <h2>Contact <span class="gold">Information</span></h2>
+                    
+                    <div class="contact-info-card">
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:info@codebright.com">info@codebright.com</a></p>
+                        <p><a href="mailto:support@codebright.com">support@codebright.com</a></p>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <h3>Call Us</h3>
+                        <p><a href="tel:+16475615337">+1 (647) 561-5337</a></p>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                        Saturday: 10:00 AM - 4:00 PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked <span class="gold">Questions</span></h2>
+            <div class="faq-grid">
+                <div class="faq-item" data-number="01">
+                    <h3>How long does it take to build a website?</h3>
+                    <p>Project timelines vary based on complexity. A basic website typically takes 2-3 weeks, while more complex projects may take 6-8 weeks or longer.</p>
+                </div>
+                <div class="faq-item" data-number="02">
+                    <h3>Do you offer website maintenance?</h3>
+                    <p>Yes! We offer comprehensive maintenance packages to keep your website secure, updated, and running smoothly.</p>
+                </div>
+                <div class="faq-item" data-number="03">
+                    <h3>Will my website be mobile-friendly?</h3>
+                    <p>Absolutely. All our websites are fully responsive and optimized for all devices, from smartphones to desktop computers.</p>
+                </div>
+                <div class="faq-item" data-number="04">
+                    <h3>Can I update the website myself?</h3>
+                    <p>Yes, we can integrate a user-friendly content management system that allows you to make updates easily without technical knowledge.</p>
+                </div>
+                <div class="faq-item" data-number="05">
+                    <h3>Do you provide hosting services?</h3>
+                    <p>While we don't provide hosting directly, we can recommend reliable hosting providers and assist with setup and configuration.</p>
+                </div>
+                <div class="faq-item" data-number="06">
+                    <h3>What if I need changes after launch?</h3>
+                    <p>We offer ongoing support and are always available to make updates or improvements to your website as your business evolves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Schedule a free consultation to discuss your project</p>
+            <a href="#" class="btn-secondary"><span>Book a Call</span></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/Codebright-logo-dark.png" alt="CodeBright Logo" class="footer-logo-image">
+                    <p>Simple, professional web design using HTML & CSS.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@codebright.com</p>
+                    <p>Phone: +1 (647) 561-5337</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CodeBright. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Handling Script -->
+    <script>
+        // Get form and status elements
+        const form = document.querySelector('.contact-form');
+        const formStatus = document.getElementById('form-status');
+        const submitButton = form.querySelector('button[type="submit"]');
+        
+        // Handle form submission
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            formStatus.className = 'loading';
+            formStatus.textContent = 'Sending your message...';
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<span>Sending...</span>';
+            
+            // Get form data
+            const formData = new FormData(form);
+            
+            try {
+                // Submit to Formspree
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success
+                    formStatus.className = 'success';
+                    formStatus.textContent = '✓ Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.';
+                    form.reset();
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = '<span>Send Message</span>';
+                    }, 3000);
+                } else {
+                    // Error from server
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Error handling
+                formStatus.className = 'error';
+                formStatus.textContent = '✗ Oops! There was a problem sending your message. Please try again or email us directly at info@codebright.com';
+                submitButton.disabled = false;
+                submitButton.innerHTML = '<span>Send Message</span>';
+            }
+        });
+    </script>
+</body>
+</html>
