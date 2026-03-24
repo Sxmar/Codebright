@@ -7,6 +7,7 @@
     <link rel="canonical" href="https://visual.codebright.ca/">
     <title>CodeBright - Premium Web Design Services</title>
     <link rel="icon" type="image/png" href="images/Codebright-logo-dark.png">
+    <link rel="stylesheet" href="styles/preloader.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/home.css">
     <!-- Google Fonts -->
@@ -18,7 +19,28 @@
     <!-- Spline 3D Animation -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.39/build/spline-viewer.js"></script>
 </head>
-<body>
+<body class="preloader-active">
+
+    <!-- ============================================
+         PRELOADER - Premium Entry Experience
+         ============================================ -->
+    <div id="preloader" role="presentation" aria-hidden="true">
+        <canvas id="preloader-canvas"></canvas>
+        <div class="preloader-glow"></div>
+        <div class="preloader-content">
+            <div class="preloader-brand">
+                <span class="brand-code">Code</span><span class="brand-bright">Bright</span>
+            </div>
+            <p class="preloader-tagline">Premium Web Design</p>
+            <div class="progress-track">
+                <div class="progress-fill"></div>
+            </div>
+            <button id="preloader-btn" class="preloader-btn" aria-label="Enter the CodeBright experience">
+                Enter Experience <span class="btn-arrow">&#8594;</span>
+            </button>
+        </div>
+    </div>
+
     <!-- Header & Navigation -->
     <header>
         <nav class="navbar">
@@ -153,6 +175,99 @@
             </div>
         </div>
     </footer>
+
+    <!-- Preloader Script -->
+    <script>
+        (function () {
+            var preloader = document.getElementById('preloader');
+            var enterBtn  = document.getElementById('preloader-btn');
+            var canvas    = document.getElementById('preloader-canvas');
+            var ctx       = canvas.getContext('2d');
+            var rafId;
+
+            /* ---------- Resize canvas ---------- */
+            function resize() {
+                canvas.width  = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resize();
+            window.addEventListener('resize', function () { resize(); initParticles(); });
+
+            /* ---------- Particle system ---------- */
+            var particles = [];
+
+            function createParticle(randomY) {
+                return {
+                    x:      Math.random() * canvas.width,
+                    y:      randomY ? Math.random() * canvas.height : canvas.height + 5,
+                    size:   Math.random() * 1.4 + 0.3,
+                    vx:     (Math.random() - 0.5) * 0.35,
+                    vy:     -(Math.random() * 0.55 + 0.18),
+                    alpha:  Math.random() * 0.35 + 0.08,
+                    dAlpha: (Math.random() * 0.004 + 0.002) * (Math.random() < 0.5 ? 1 : -1)
+                };
+            }
+
+            function initParticles() {
+                particles = [];
+                var count = Math.min(90, Math.floor((canvas.width * canvas.height) / 10000));
+                for (var i = 0; i < count; i++) {
+                    particles.push(createParticle(true));
+                }
+            }
+
+            function tickParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (var i = 0; i < particles.length; i++) {
+                    var p = particles[i];
+                    p.x     += p.vx;
+                    p.y     += p.vy;
+                    p.alpha += p.dAlpha;
+                    if (p.alpha > 0.45 || p.alpha < 0.05) p.dAlpha *= -1;
+                    if (p.y < -6 || p.x < -6 || p.x > canvas.width + 6) {
+                        particles[i] = createParticle(false);
+                        continue;
+                    }
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fillStyle = p.size > 1.1
+                        ? 'rgba(212,175,55,' + p.alpha + ')'
+                        : 'rgba(255,255,255,' + (p.alpha * 0.55) + ')';
+                    ctx.fill();
+                }
+                rafId = requestAnimationFrame(tickParticles);
+            }
+
+            initParticles();
+            tickParticles();
+
+            /* ---------- Reveal button after progress completes ---------- */
+            /* progress delay: 1.4s start + 2.4s fill + 0.25s buffer = 4.05s */
+            setTimeout(function () {
+                enterBtn.classList.add('visible');
+            }, 4050);
+
+            /* ---------- Exit on button click ---------- */
+            enterBtn.addEventListener('click', function () {
+                // Disable immediately to prevent double-fire
+                enterBtn.disabled = true;
+
+                // CSS keyframe drives the exit — JS only toggles the class
+                preloader.classList.add('hide');
+
+                // animationend fires exactly once for the named animation on
+                // #preloader itself — no bubbling from child transitions
+                preloader.addEventListener('animationend', function handler(e) {
+                    // Guard: ensure this is the preloaderExit animation on the
+                    // overlay, not a stray event from a nested element
+                    if (e.target !== preloader) return;
+                    preloader.style.display = 'none';
+                    cancelAnimationFrame(rafId);
+                    document.body.classList.remove('preloader-active');
+                }, { once: true });
+            });
+        }());
+    </script>
 
     <!-- Spline 3D Mouse Interaction Script -->
     <script>
