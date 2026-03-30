@@ -73,11 +73,19 @@
 }
 
 .about-image-col img {
+    display: block;
     width: 100%;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     object-fit: cover;
+    aspect-ratio: 3 / 2;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image-col img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
 }
 
 /* Checklist */
@@ -148,6 +156,7 @@
     .about-image-col img {
         width: 100%;
         border-radius: 15px;
+        aspect-ratio: 3 / 2;
     }
     
     .about-text-col p {
